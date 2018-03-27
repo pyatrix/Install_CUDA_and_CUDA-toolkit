@@ -5,8 +5,8 @@
 
 
 更新清單  
-$ sudo apt-get update   
-$ sudo apt-get upgrade  
+$ sudo apt-get update  
+$ sudo apt-get upgrade   
 
   
 到https://developer.nvidia.com/cuda-toolkit-archive  
