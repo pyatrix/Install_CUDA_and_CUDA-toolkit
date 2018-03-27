@@ -1,5 +1,4 @@
 # Install_CUDA_and_CUDA-toolkit
-◎灰底字為特殊需求或有問題時的處理方法，正常安裝時略過即可。  
 ◎因為本流程全部安裝成功後不建議再做任何更新，若有任何其它套件需使用，最好在進行本流程前先安裝，也建議Python2.7與3的套件皆安裝。  
 ◎本流程Python會安裝2.7與3兩種版本，因此pip的使用也依版本分為pip2與pip3，可以選擇只安裝2.7、只安裝3，或2.7與3的套件皆安裝。  
 ◎常見的python3版本還分為3.5與3.6，請固定使用其中一種。  
@@ -8,10 +7,7 @@
 更新清單
 $ sudo apt-get update  
 $ sudo apt-get upgrade  
-安裝8.0版本的cuda  
-$ sudo apt-get install cuda-8-0  
-鎖住cuda的版本,避免自動升級到新版  
-$ sudo apt-mark hold cuda-8-0  
+
   
 到https://developer.nvidia.com/cuda-toolkit-archive  
 下載cuda工具包丟到家目錄  
@@ -106,12 +102,11 @@ $ cd  /usr/local/cuda/lib64
 $ sudo ln -s libcudnn.so.6.0.21 libcudnn.so.6   
 $ sudo ln -s libcudnn.so.6 libcudnn.so      
 $ cd ~/cuda/include
-$ sudo cp cudnn.h /usr/local/cuda/include/  #複製標頭檔  
-修改權限  
-$ sudo chmod a+r /usr/local/cuda/lib64/libcudnn*  
+$ sudo cp cudnn.h /usr/local/cuda/include/  #複製標頭檔  
+修改權限   
+$ sudo chmod a+r /usr/local/cuda/lib64/libcudnn*  
 本流程使用的cudnn版本為6.0.21，若為其它版本請自行更換檔名。  
    
 確認更新  
 $ sudo apt update  
  
-    
