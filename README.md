@@ -4,9 +4,9 @@
 ◎常見的python3版本還分為3.5與3.6，請固定使用其中一種。  
 
 
-更新清單
-$ sudo apt-get update  
-$ sudo apt-get upgrade  
+更新清單 
+$ sudo apt-get update   
+$ sudo apt-get upgrade  
 
   
 到https://developer.nvidia.com/cuda-toolkit-archive  
