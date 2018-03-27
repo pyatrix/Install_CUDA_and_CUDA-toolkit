@@ -10,18 +10,18 @@ $ sudo apt-get upgrade  
 
   
 到https://developer.nvidia.com/cuda-toolkit-archive  
-下載cuda工具包丟到家目錄  
+下載cuda工具包丟到家目錄    
    
 選擇CUDA Toolkit 8.0 GA2 (Feb 2017)→  
 Linux→x86_64→Ubuntu→16.04→deb(local)→Download(1.9GB)  
    
-安裝deb檔案  
+安裝deb檔案    
 $ sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb  
      
-下載補充包  
-選擇Patch2        Download (121.4MB)  
-安裝Patch2  
-$ sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-cublas-performance-update_8.0.61-1_amd64.deb  
+下載補充包     
+選擇Patch2        Download (121.4MB)     
+安裝Patch2    
+$ sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-cublas-performance-update_8.0.61-1_amd64.deb    
    
 將CUDA路徑添加至環境變數   
 $ echo 'export PATH=/usr/local/cuda/bin:$PATH' >> ~/.bashrc  
