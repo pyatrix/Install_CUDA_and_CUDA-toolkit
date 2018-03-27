@@ -15,33 +15,33 @@ $ sudo apt-mark hold cuda-8-0  
   
 到https://developer.nvidia.com/cuda-toolkit-archive  
 下載cuda工具包丟到家目錄  
-  
-選擇CUDA Toolkit 8.0 GA2 (Feb 2017)→  
+   
+選擇CUDA Toolkit 8.0 GA2 (Feb 2017)→  
 Linux→x86_64→Ubuntu→16.04→deb(local)→Download(1.9GB)  
-  
-安裝deb檔案  
+   
+安裝deb檔案  
 $ sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb  
-  
-下載補充包  
+     
+下載補充包  
 選擇Patch2        Download (121.4MB)  
 安裝Patch2  
 $ sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-cublas-performance-update_8.0.61-1_amd64.deb  
-  
-將CUDA路徑添加至環境變數  
-$ echo 'export PATH=/usr/local/cuda/bin:$PATH' >> ~/.bashrc  
+   
+將CUDA路徑添加至環境變數   
+$ echo 'export PATH=/usr/local/cuda/bin:$PATH' >> ~/.bashrc  
 $ echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc  
 $ echo 'export CUDA_HOME=/usr/local/cuda-8.0'>> ~/.bashrc  
 $ echo 'export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}'>> ~/.bashrc  
 $ echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-8.0/lib64:/usr/local/cuda-8.0/extras/CUPTI/lib64:~/cuDNN_installpath" '>> ~/.bashrc  
-  
-啟動環境變數  
+    
+啟動環境變數   
 $ source ~/.bashrc  
-  
-成功後更新清單  
+   
+成功後更新清單  
 $ sudo apt-get update   
 $ sudo apt upgrade  
-  
-重新開機  
+   
+重新開機  
 $ reboot  
   
 安裝cuda+cuda_tools  
@@ -103,8 +103,8 @@ Processing triggers for libc-bin (2.23-0ubuntu10) ...
 請依以下流程處理：  
 $ sudo rm -rf  /usr/local/cuda/lib64/libcudnn.so.6.0.21 libcudnn.so.6  
 $ cd  /usr/local/cuda/lib64  
-$ sudo ln -s libcudnn.so.6.0.21(X) libcudnn.so.6(X)  
-$ sudo ln -s libcudnn.so.6(X) libcudnn.so(X)  
+$ sudo ln -s libcudnn.so.6.0.21 libcudnn.so.6   
+$ sudo ln -s libcudnn.so.6 libcudnn.so      
 $ cd ~/cuda/include
 $ sudo cp cudnn.h /usr/local/cuda/include/  #複製標頭檔  
 修改權限  
